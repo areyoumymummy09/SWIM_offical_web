@@ -1,0 +1,7 @@
+@mixin apply-404-styles() {
+  .no-results {
+    @include xy-grid-container;
+    margin-top: rem-calc(40);
+    margin-bottom: rem-calc(40);
+  }
+}

@@ -1,0 +1,143 @@
+@mixin apply-footer-styles() {
+  .site-footer {
+    background-color: $light-gray;
+
+    .footer-content {
+      @include xy-grid();
+      max-width: $global-width;
+      margin: auto;
+      padding-top: rem-calc(40);
+      padding-bottom: rem-calc(30);
+      justify-content: center;
+    }
+
+    .site-logo {
+      @include xy-cell(5);
+      margin-bottom: rem-calc(20px);
+
+      .custom-logo {
+        max-width: 100%;
+        width: 100%;
+      }
+
+      @include breakpoint(large) {
+        @include xy-cell(3);
+      }
+    }
+
+    .footer-social-links {
+      @include xy-cell();
+      margin-bottom: rem-calc(20px);
+
+      .social-links {
+        @include xy-grid();
+        list-style: none;
+        margin: 0;
+        justify-content: center;
+      }
+
+      .menu-item {
+        display: flex;
+        flex: 0 0 auto;
+        margin-left: rem-calc(-7);
+        align-items: center;
+        justify-content: center;
+        height: rem-calc(40);
+        width: rem-calc(40);
+        font-size: rem-calc(20px);
+        background-color: $medium-gray;
+        border-radius: 100%;
+        transition: background-color 0.33s ease-in;
+
+        &:nth-of-type(even) {
+          background-color: $dark-gray;
+        }
+
+        a {
+          color: $primary-color;
+          transition: background-color 0.33s ease-in;
+        }
+
+        &:hover,
+        &:focus {
+          background-color: $primary-color;
+
+          a {
+            color: $light-gray;
+          }
+        }
+      }
+
+      @include breakpoint(medium) {
+        @include xy-cell("full");
+        @include flex-order(1);
+        margin-bottom: 0;
+      }
+    }
+
+    .footer-navigation {
+      @include xy-cell();
+
+      @include breakpoint(medium) {
+        @include xy-cell(7);
+      }
+
+      @include breakpoint(large) {
+        @include xy-cell(5);
+      }
+
+      .footer-navigation-wrapper {
+        @include xy-grid();
+        margin: 0;
+        list-style: none;
+      }
+
+      .menu-item {
+        @include xy-cell(6);
+        margin-bottom: rem-calc(20px);
+        text-align: center;
+
+        @include breakpoint(medium) {
+          @include xy-cell(4);
+          text-align: left;
+        }
+      }
+    }
+
+    .site-info-container {
+      margin-bottom: rem-calc(20px);
+
+      h5 {
+        margin: 0;
+      }
+
+      hr {
+        margin: rem-calc(15) auto;
+        border-bottom-width: 2px;
+        border-bottom-color: $primary-color;
+      }
+
+      p {
+        margin: 0;
+      }
+
+      @include breakpoint(large up) {
+        @include xy-cell(4);
+        border-left: 2px solid $primary-color;
+        padding-left: rem-calc(30);
+      }
+    }
+
+    .bottom-bar {
+      @include xy-grid();
+      padding: rem-calc(20px);
+      background-color: $secondary-color;
+      color: $white;
+      justify-content: center;
+
+      p {
+        margin: 0;
+      }
+    }
+  }
+}

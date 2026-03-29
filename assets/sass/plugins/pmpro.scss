@@ -1,0 +1,21 @@
+@mixin apply-pmpro-styles {
+  .pmpro_checkout-field {
+    position: relative;
+
+    .pmpro_asterisk {
+      color: red;
+      position: absolute;
+      top: 0px;
+      left: -10px;
+    }
+  }
+
+  .pmpro_btn,
+  .pmpro_btn:link {
+    @include button(
+      $background: get-color("primary"),
+      $background-hover: smart-scale(get-color("secondary")),
+      $color: $white
+    );
+  }
+}

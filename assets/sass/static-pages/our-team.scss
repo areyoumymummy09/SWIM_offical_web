@@ -1,0 +1,38 @@
+@mixin apply-our-team-styles() {
+  .our-team {
+    .team-item {
+      overflow: hidden;
+
+      &::-webkit-scrollbar {
+        width: 0 !important;
+      }
+
+      & > .elementor-widget-wrap.elementor-element-populated {
+        padding: 0;
+      }
+
+      .item-image {
+        position: relative;
+        margin: 0;
+      }
+
+      .item-description {
+        min-height: 100%;
+        width: 100%;
+        transition: all 0.5s ease-out;
+      }
+
+      &:hover,
+      &:focus {
+        overflow: -moz-scrollbars-none;
+        -ms-overflow-style: none;
+        overflow: auto;
+
+        .item-description {
+          top: 0;
+          background-color: get-color("accent-blue");
+        }
+      }
+    }
+  }
+}

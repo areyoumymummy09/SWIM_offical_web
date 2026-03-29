@@ -1,0 +1,27 @@
+@mixin apply-swim-programs-styles {
+	.swim_programs-button {
+		font-weight: bold;
+
+		&.swim_programs-join-program,
+		&.swim_programs-premium-program,
+		&.swim_programs-modal-button {
+			@include button(
+				$background: get-color("primary"),
+				$background-hover: smart-scale(get-color("secondary")),
+				$color: $white
+			);
+		}
+
+		&.swim_programs-remove-program {
+			@include button(
+				$background: get-color("secondary"),
+				$background-hover: smart-scale(get-color("secondary")),
+				$color: $white
+			);
+			height: rem-calc(24);
+			width: rem-calc(24);
+			margin: auto;
+			padding: 1px;
+		}
+	}
+}
