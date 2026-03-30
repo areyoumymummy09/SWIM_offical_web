@@ -21,7 +21,7 @@ jobs:
           port: ${{ secrets.FTP_PORT }}
           protocol: ftp
           local-dir: ./
-          server-dir: /singlewomeninmotherhood.com/public_html/wp-content/themes/swim/
+          server-dir: /public_html/wp-content/themes/swim/
           exclude: |
             */.git/**
             */.github/*
