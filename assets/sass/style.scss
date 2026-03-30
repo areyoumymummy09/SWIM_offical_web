@@ -18,7 +18,7 @@ Tags: basic
 @import "plugins/swim-programs.scss";
 
 /* Base */
-@import "base/settings.scss";
+@import "base/settings";
 @import "base/fonts.scss";
 @import "base/global.scss";
 // @import "base/functions.scss";
@@ -26,6 +26,7 @@ Tags: basic
 /* Components */
 @import "components/header.scss";
 @import "components/footer.scss";
+@import "components/bubble-list.scss";
 @import "static-pages/home.scss";
 @import "static-pages/our-team.scss";
 @import "components/posts.scss";
@@ -85,6 +86,7 @@ Tags: basic
 /* Includes */
 @include apply-header-styles;
 @include apply-footer-styles;
+@include apply-bubble-list-styles;
 @include apply-home-styles;
 @include apply-our-team-styles;
 @include apply-confirmation-styles;
